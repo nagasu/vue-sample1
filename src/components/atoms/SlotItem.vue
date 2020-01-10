@@ -4,7 +4,7 @@
       <slot name="header" />
     </header>
     <main>
-      <slot>default</slot>
+      <slot v-bind:user="user">default</slot>
     </main>
     <footer>
       <slot name="footer" />
@@ -16,5 +16,9 @@
 import { Component, Vue } from "vue-property-decorator";
 
 @Component
-export default class SlotItem extends Vue {}
+export default class SlotItem extends Vue {
+  user = {
+    name: "nagasu"
+  };
+}
 </script>

@@ -5,8 +5,8 @@
         this is header
       </template>
 
-      <template v-slot:default>
-        hello
+      <template v-slot="{ user: person }">
+        @{{ person.name }}
       </template>
 
       <template v-slot:footer>
