@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import CheckBox from "@/views/CheckBox.vue";
+import Slot from "@/views/Slot.vue";
 
 Vue.use(Router);
 
@@ -27,6 +28,11 @@ export default new Router({
       path: "/checkbox",
       name: "checkbox",
       component: CheckBox
+    },
+    {
+      path: "/slot",
+      name: "slot",
+      component: Slot
     }
   ]
 });

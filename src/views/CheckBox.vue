@@ -23,8 +23,8 @@ import AtomCheckBox from "@/components/atoms/AtomCheckBox.vue";
   }
 })
 export default class CheckBox extends Vue {
-  checked1: boolean = false
-  checked2: boolean = false
-  selected: string[] = ['a']
+  checked1: boolean = false;
+  checked2: boolean = false;
+  selected: string[] = ["a"];
 }
 </script>

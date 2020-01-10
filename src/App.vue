@@ -3,9 +3,10 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link to="/checkbox">CheckBox</router-link>
+      <router-link to="/checkbox">CheckBox</router-link> |
+      <router-link to="/slot">Slot</router-link>
     </div>
-    <hr>
+    <hr />
     <router-view />
   </div>
 </template>
