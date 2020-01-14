@@ -14,8 +14,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import AtomCheckBox from "@/components/atoms/AtomCheckBox.vue";
+import { Component, Vue } from 'vue-property-decorator'
+import AtomCheckBox from '@/components/atoms/AtomCheckBox.vue'
 
 @Component({
   components: {
