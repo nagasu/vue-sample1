@@ -10,42 +10,42 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component({
   model: {
-    prop: "checked",
-    event: "change"
+    prop: 'checked',
+    event: 'change'
   }
 })
 export default class AtomCheckBox extends Vue {
   @Prop({ type: String })
-  name!: string;
+  name!: string
 
   @Prop({ type: String })
-  label!: string;
+  label!: string
 
   @Prop({ type: [Boolean, Array] })
-  checked!: boolean | string[];
+  checked!: boolean | string[]
 
   @Prop({ type: String })
-  value!: string;
+  value!: string
 
   @Prop({ type: Boolean, default: false })
-  small!: boolean;
+  small!: boolean
 
   get internalValue(): boolean | string[] {
-    return this.checked;
+    return this.checked
   }
 
   set internalValue(newVal: boolean | string[]) {
-    this.$emit("change", newVal);
+    this.$emit('change', newVal)
   }
 
   get classes() {
     return {
       small: this.small
-    };
+    }
   }
 }
 </script>

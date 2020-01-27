@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="col-container">
     <header>
       <slot name="header"></slot>
     </header>

@@ -1,52 +1,61 @@
 <template>
-  <div class="container">
-    <div class="item item1">
-      <div>Item 1</div>
+  <div class="wrapper">
+    <div class="row-container">
+      <div class="col-container">
+        <div class="item item1">
+          <div>Item 1</div>
+        </div>
+      </div>
+      <div class="col-container">
+        <div class="item item1">
+          <div>Item 1</div>
+        </div>
+        <div class="item item2">Item 2</div>
+      </div>
+      <div class="col-container">
+        <div class="item item1">
+          <div>Item 1</div>
+        </div>
+        <div class="item item2">Item 2</div>
+        <div class="item item3">Item 3</div>
+      </div>
     </div>
-    <div class="item item2">Item 2</div>
-    <div class="item item3">Item 3</div>
-<!--    <div class="item">Item 4</div>-->
-<!--    <div class="item">Item 5</div>-->
-<!--    <div class="item">Item 6</div>-->
-<!--    <div class="item">Item 7</div>-->
-<!--    <div class="item">Item 8</div>-->
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 
-@Component({})
+@Component
 export default class Flex extends Vue {}
 </script>
 
 <style lang="scss">
-.container {
+.wrapper {
   margin-top: 20px;
+}
+
+.row-container {
+  display: flex;
+
+  border: solid 1px black;
+}
+
+.col-container {
+  display: flex;
+  flex-flow: column nowrap;
+
   border: solid 1px grey;
-  height: 300px;
+  width: 100%;
+  height: 100px;
+
   .item {
+    display: flex;
+    align-items: center;
+
     border: solid 1px cornflowerblue;
     width: 100%;
     height: 100%;
-    flex-basis: auto;
-    /*height: 100px;*/
-  }
-}
-
-.container {
-  display: flex;
-  /*flex-direction: row;*/
-  /*flex-wrap: nowrap;*/
-  flex-flow: column nowrap;
-  /*justify-content: space-between;*/
-  /*align-items: center;*/
-  /*align-content: center;*/
-
-  .item {
-    /*align-self: flex-end;*/
-    display: flex;
-    align-items: center;
   }
 }
 </style>
